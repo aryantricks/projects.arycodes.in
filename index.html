@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .main {
+            padding: 20px;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid rgba(221, 221, 221, 0.4);
+            border-radius: 15px;
+            overflow: hidden;
+            max-width: 300px;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            padding: 20px 0;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-img {
+            width: 90%;
+            height: 200px;
+            object-fit: cover;
+            margin: 0 auto;
+            border-radius: 8px;
+            background: radial-gradient()
+        }
+
+        .card-content {
+            padding: 20px;
+            padding-bottom: 0;
+
+
+        }
+
+        .card-title {
+            font-size: 1.614em;
+            margin: 0 0 10px 0;
+        }
+
+        .card-desc {
+            font-size: 1em;
+            color: #666;
+            margin: 0 0 10px 0;
+        }
+
+        .tags {
+            margin: 10px 0;
+        }
+
+        .tag {
+            /* background-color: #007bff; */
+            color: #333;
+            padding: 5px 8px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            margin-right: 5px;
+            text-align: left;
+            border: 0.2px solid #99999945;
+        }
+
+        .card-links {
+            display: flex;
+            justify-content: end;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+
+
+
+        .card-link {
+            color: #007bff;
+            text-decoration: none;
+            border: 1px solid #007bff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+
+        .card-link:nth-child(2){
+            background-color:#007bff;
+            color: #f9f9f9;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>My Projects</h1>
+    </header>
+    <div class="main">
+        <div class="cards-container">
+            <div class="card">
+                <img src="/img.jpeg" alt="Project 1" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Finance Tracker App</h2>
+                    <div class="tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                    <p class="card-desc">A comprehensive app to track your daily expenses and manage budgets
+                        effectively.</p>
+
+                    <div class="card-links">
+                        <a href="https://github.com/arycodes/finance-tracker-app" class="card-link">GitHub</a>
+                        <a href="download/finance-tracker-app.zip" class="card-link">Download</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/img.jpeg" alt="Project 2" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Portfolio Website</h2>
+                    <div class="tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <p class="card-desc">A personal portfolio website to showcase my projects and skills with a modern
+                        UI/UX design.</p>
+
+                    <div class="card-links">
+                        <a href="https://github.com/arycodes/portfolio-website" class="card-link">GitHub</a>
+                        <a href="download/portfolio-website.zip" class="card-link">Download</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/img.jpeg" alt="Project 3" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Task Manager</h2>
+                    <div class="tags">
+                        <span class="tag">Vue.js</span>
+                        <span class="tag">Firebase</span>
+                    </div>
+                    <p class="card-desc">An efficient task management tool to help you organize your daily tasks and
+                        improve productivity.</p>
+
+                    <div class="card-links">
+                        <a href="https://github.com/arycodes/task-manager" class="card-link">GitHub</a>
+                        <a href="download/task-manager.zip" class="card-link">Download</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/img.jpeg" alt="Project 4" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Weather App</h2>
+                    <div class="tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">API</span>
+                        <span class="tag">Bootstrap</span>
+                    </div>
+                    <p class="card-desc">A simple yet powerful weather app that provides current weather conditions and
+                        forecasts.</p>
+
+                    <div class="card-links">
+                        <a href="https://github.com/arycodes/weather-app" class="card-link">GitHub</a>
+                        <a href="download/weather-app.zip" class="card-link">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+
+</html>
