@@ -14,7 +14,7 @@ def connect_to_mongo():
     collection = db[COLLECTION_NAME]
     return collection
 
-@app.route('/get_project/<project_id>', methods=['GET'])
+@app.route('/api/<project_id>', methods=['GET'])
 def get_project(project_id):
     collection = connect_to_mongo()
     project = collection.find_one({'_id': project_id})
@@ -24,7 +24,7 @@ def get_project(project_id):
     else:
         return jsonify({'error': 'Project not found'}), 404
 
-@app.route('/get_all_projects', methods=['GET'])
+@app.route('/api_', methods=['GET'])
 def get_all_projects():
     collection = connect_to_mongo()
     projects = list(collection.find())
