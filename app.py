@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify
 from pymongo import MongoClient
-from bson import ObjectId
 import json
 
 app = Flask(__name__)
@@ -15,11 +14,10 @@ def connect_to_mongo():
     collection = db[COLLECTION_NAME]
     return collection
 
-
 @app.route('/get_project/<project_id>', methods=['GET'])
 def get_project(project_id):
     collection = connect_to_mongo()
-    project = collection.find_one({'_id': ObjectId(project_id)})
+    project = collection.find_one({'_id': project_id})
     if project:
         project['_id'] = str(project['_id'])  # Convert ObjectId to string for JSON serialization
         return jsonify(project)
